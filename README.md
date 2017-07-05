@@ -67,6 +67,7 @@ Set this to `true` and `drupal_build_makefile`, `drupal_build_composer` to `fals
 
     drupal_core_path: "{{ drupal_deploy_dir }}/web"
     drupal_core_owner: "{{ ansible_ssh_user | default(ansible_env.SUDO_USER, true) | default(ansible_env.USER, true) | default(ansible_user_id) }}"
+    drupal_core_group: "{{ ansible_ssh_user | default(ansible_env.SUDO_USER, true) | default(ansible_env.USER, true) | default(ansible_user_id) }}"
     drupal_db_user: drupal
     drupal_db_password: drupal
     drupal_db_name: drupal

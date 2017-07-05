@@ -5,7 +5,7 @@
     state: directory
     mode: 0775
     owner: "{{ drupal_core_owner }}"
-    group: "{{ drupal_core_owner }}"
+    group: "{{ drupal_core_group }}"
   when: drupal_composer_path and not drupal_site_exists
 
 - name: Check out Drupal to the docroot.
