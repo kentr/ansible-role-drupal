@@ -5,9 +5,8 @@
     state: directory
     mode: 0775
     owner: "{{ drupal_core_owner }}"
-    group: "{{ drupal_core_group }}"
-    ignore_errors: yes
-  when: drupal_composer_path and not drupal_site_exists
+    group: "{{ drupal_core_owner }}"
+  when: drupal_deploy_dir and not drupal_site_exists
 
 - name: Check out Drupal to the docroot.
   git:
